@@ -2,7 +2,11 @@ import React, { Component } from 'react'
 import './../styles/instructions.css'
 
 class Counter extends Component {
-  state = { count: 0 }
+  constructor(props) {
+    super(props)
+    this.state = { count: this.props.initialCount }
+  }
+
   increment = () => {
     this.setState({
       count: this.state.count + 1

@@ -1,0 +1,35 @@
+import React, { Component } from 'react'
+import { Instructions } from './components'
+import { Counter } from './components'
+import './styles/app.css'
+
+class App extends Component {
+  handleSubmit = (event) => {
+	  event.preventDefault()
+	  count = this.inputNode.value
+  }
+  render() {
+    return (
+      <div className="app">
+        <h1>Hello World!</h1>
+        <Instructions
+          shouldDisplayImage={true}
+          items={['apple', 'banana', 'clementine', 'dragonfruit', 'b1']}
+        />
+        <Counter
+	  initialCount = count
+	/>
+	<br/>
+	<form onSubmit={this.handleSubmit}>
+	    <label>
+	    	Initial Count:
+	    	<input type="number" ref={node => this.inputNode = node} />
+	    </label>
+	    <button type="submit">Submit</button>
+	</form>
+      </div>
+    )
+  }
+}
+
+export default App
