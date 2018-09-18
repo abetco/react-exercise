@@ -8,7 +8,7 @@ class Instructions extends Component {
         Follow the instructions on the README to get started!
         {this.props.shouldDisplayImage && (
           <img
-            className="instructions_logo"
+            className="instructions__logo"
             src="https://uiuc.hack4impact.org/img/colored-logo.png"
             alt="h4i logo"
           />
@@ -17,7 +17,7 @@ class Instructions extends Component {
           <ul key={index}>
             {item.length >= 3 && (
               <li>
-                {this.props.items.indexOf(item) % 2 == 1
+                {this.props.items.indexOf(item) % 2 === 1
                   ? item.toUpperCase()
                   : item}
               </li>

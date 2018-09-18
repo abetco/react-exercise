@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Instructions } from './components'
+import { Counter } from './components'
 import './styles/app.css'
 
 class App extends Component {
@@ -11,6 +12,7 @@ class App extends Component {
           shouldDisplayImage={true}
           items={['apple', 'banana', 'clementine', 'dragonfruit', 'b1']}
         />
+        <Counter />
       </div>
     )
   }
